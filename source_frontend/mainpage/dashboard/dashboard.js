@@ -15,11 +15,11 @@ function logout() {
 
 // Sample data - would be replaced by API calls in production
 const users = [
-    { id: 1, name: "John Smith", email: "john@example.com", phone: "123-456-7890", status: "active", storageUsed: 7.8, storageLimit: 10, lastActive: "2025-03-14" },
-    { id: 2, name: "Sarah Johnson", email: "sarah@example.com", phone: "234-567-8901", status: "active", storageUsed: 5.2, storageLimit: 10, lastActive: "2025-03-15" },
-    { id: 3, name: "Michael Brown", email: "michael@example.com", phone: "345-678-9012", status: "inactive", storageUsed: 2.5, storageLimit: 5, lastActive: "2025-03-01" },
-    { id: 4, name: "Emily Davis", email: "emily@example.com", phone: "456-789-0123", status: "active", storageUsed: 4.7, storageLimit: 10, lastActive: "2025-03-12" },
-    { id: 5, name: "Robert Wilson", email: "robert@example.com", phone: "567-890-1234", status: "active", storageUsed: 9.1, storageLimit: 10, lastActive: "2025-03-15" }
+    { id: 1, name: "User1", email: "user1@gmail.com", phone: "123-456-7890", status: "active", storageUsed: 7.8, storageLimit: 10, lastActive: "2025-03-14" },
+    { id: 2, name: "User2", email: "user2@gmail.com", phone: "234-567-8901", status: "active", storageUsed: 5.2, storageLimit: 10, lastActive: "2025-03-15" },
+    { id: 3, name: "User3", email: "user3@gmail.com", phone: "345-678-9012", status: "inactive", storageUsed: 2.5, storageLimit: 5, lastActive: "2025-03-01" },
+    { id: 4, name: "User4", email: "user4@gmail.com", phone: "456-789-0123", status: "active", storageUsed: 4.7, storageLimit: 10, lastActive: "2025-03-12" },
+    { id: 5, name: "User5", email: "user5@gmail.com", phone: "567-890-1234", status: "active", storageUsed: 9.1, storageLimit: 10, lastActive: "2025-03-15" }
 ];
 
 function updateDashboard() {

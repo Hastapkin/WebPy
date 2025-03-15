@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="../sidebar/sidebar.css">
+    <script>
+        // Check if the user is logged in
+        window.onload = function() {
+            if (localStorage.getItem('isLoggedIn') !== 'true') {
+                location.href = '../../login/login.html'; // Corrected path to the login.html file
+            }
+        }
+        // Function to log out the user
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            location.href = '../../login/login.html'; // Corrected path to the login.html file
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../../../assets/logoOSAS.png" alt="Logo">
+        <button onclick="location.href='../dashboard/dashboard.html'">Dashboard</button>
+        <button onclick="location.href='../users/users.html'">Users</button>
+        <button onclick="location.href='../profile/profile.html'">Profile</button>
+        <button class="active" onclick="location.href='settings.html'">Settings</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</body>
+</html>

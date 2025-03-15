@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSAS</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="../sidebar/sidebar.css">
+    <link rel="stylesheet" href="../dashboard/dashboard.css">
+    <script>
+        // Check if the user is logged in
+        window.onload = function() {
+            if (localStorage.getItem('isLoggedIn') !== 'true') {
+                location.href = '../../login/login.html'; // Corrected path to the login.html file
+            }
+            // Automatic scroll down
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+        // Function to log out the user
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            location.href = '../../login/login.html'; // Corrected path to the login.html file
+        }
+    </script>
+</head>
+<body>
+    <!-- Sidebar navigation -->
+    <div class="sidebar">
+        <!-- Logo image -->
+        <img src="../../../assets/logoOSAS.png" alt="Logo">
+        <!-- Navigation buttons -->
+        <button class="active" onclick="location.href='dashboard.html'">Dashboard</button>
+        <button onclick="location.href='../users/users.html'">Users</button>
+        <button onclick="location.href='../profile/profile.html'">Profile</button>
+        <button onclick="location.href='../settings/settings.html'">Settings</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <!-- Main content area -->
+    <div class="main">
+        <div class="header">
+            <div class="search">
+                <button><i class="ri-search-2-line"></i></button>
+                <input type="text" placeholder="Search">
+                <i class="ri-equalizer-line"></i>
+            </div>
+            <div class="icon-btns">
+                <i class="ri-notification-line"></i>
+                <i class="ri-message-3-line"></i>
+                <i class="ri-menu-line" id="menu-btn"></i>
+            </div>
+        </div>
+
+        <!-- Miniboards -->
+        <h3 class="separator">
+            Overview
+        </h3>
+        
+        <div class="quick-access">
+            <div class="item">
+                
+                <h5>Act 1</h5>
+                <p>1</p>
+            </div>
+            <div class="item">
+                
+                <h5>Act 2</h5>
+                <p>1,000</p>
+            </div>
+            <div class="item">
+                
+                <h5>Act 3</h5>
+                <p>1,000,000</p>
+            </div>
+            <div class="item">
+                
+                <h5>Act 4</h5>
+                <p>1,000,000,000</p>
+            </div>
+        </div>
+
+        <h3 class="separator">
+            Profile
+        </h3>
+
+        <table>
+            <tbody>
+                <tr class="selected">
+                    <td class="name">User 1</td>
+                    <td class="extension">abcdef@gmal.com</td>
+                    <td class="size">0.123.456.789</td>
+                    <td class="more"></td>
+                </tr>
+                <tr>
+                    <td class="name">User 1</td>
+                    <td class="extension">abcdef@gmal.com</td>
+                    <td class="size">0.123.456.789</td>
+                    <td class="more"></td>
+                </tr>
+                <tr>
+                    <td class="name">User 1</td>
+                    <td class="extension">abcdef@gmal.com</td>
+                    <td class="size">0.123.456.789</td>
+                    <td class="more"></td>
+                </tr>
+                <tr>
+                    <td class="name">User 1</td>
+                    <td class="extension">abcdef@gmal.com</td>
+                    <td class="size">0.123.456.789</td>
+                    <td class="more"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--Profile on main page-->
+    <div class="right-section">
+        <div class="profile">
+            <div class="info">
+                <img src="assets/profile.png">
+                <div class="account">
+                    <h5>TuanPham</h5>
+                    <p>tuandb@orasas.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="widgets">
+
+            <div class="disk">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+
+                <div class="info">
+                    <h5><span>25000 / 100000</h5>
+                </div>
+            </div>
+            <div class="disk">
+
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+
+                <div class="info">
+                    <h5><span>25000 / 100000</h5>
+                </div>
+            </div>
+            <div class="disk">
+
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+
+                <div class="info">
+                    <h5><span>25000 / 100000</h5>
+                </div>
+            </div>
+            <div class="disk">
+                
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+
+                <div class="info">
+                    <h5><span>25000 / 100000</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

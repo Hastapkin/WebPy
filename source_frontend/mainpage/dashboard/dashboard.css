@@ -68,6 +68,11 @@ body {
     margin-right: 10px;
     font-size: 20px;
 }
+.sidebar .menu-item {
+    text-decoration: none;
+    color: white;
+}
+
 
 .sidebar .logout {
     position: absolute;
@@ -282,7 +287,10 @@ body {
 .user-table tr:hover {
     background-color: #f9fafc;
 }
-
+/* Highlight selected row */
+#user-table-body tr.selected {
+    background-color: #f0f7ff;
+}
 .status {
     padding: 5px 10px;
     border-radius: 20px;

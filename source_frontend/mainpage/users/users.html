@@ -3,34 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
-    <!-- Link to the external CSS file for styling -->
-    <link rel="stylesheet" href="../sidebar/sidebar.css">
-    <script>
-        // Check if the user is logged in
-        window.onload = function() {
-            if (localStorage.getItem('isLoggedIn') !== 'true') {
-                location.href = '../../login/login.html'; // Corrected path to the login.html file
-            }
-        }
-        // Function to log out the user
-        function logout() {
-            localStorage.removeItem('isLoggedIn');
-            location.href = '../../login/login.html'; // Corrected path to the login.html file
-        }
-    </script>
+    <title>OSAS</title>
+    <!-- Link to icon library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="users.css">
+    <script src="users.js" defer></script>    
 </head>
 <body>
-    <!-- Sidebar navigation -->
-    <div class="sidebar">
-        <!-- Logo image -->
-        <img src="../../../assets/logoOSAS.png" alt="Logo">
-        <!-- Navigation buttons -->
-        <button onclick="location.href='../dashboard/dashboard.html'">Dashboard</button>
-        <button class="active" onclick="location.href='users.html'">Users</button>
-        <button onclick="location.href='../profile/profile.html'">Profile</button>
-        <button onclick="location.href='../settings/settings.html'">Settings</button>
-        <button onclick="logout()">Logout</button>
+    <div class="container">
+        <!-- 1. SIDEBAR NAVIGATION -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../../../assets/logoOSAS.png" alt="logoOSAS">
+                <h2>OSAS Company</h2>
+            </div>
+            
+            <div class="menu">
+                <a href="../dashboard/dashboard.html" class="menu-item active">
+                    <i class="ri-dashboard-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="users.html" class="menu-item">
+                    <i class="ri-user-line"></i>
+                    <span>Users</span>
+                </a>
+                </a>
+                <a href="../profile/profile.html" class="menu-item">
+                    <i class="ri-file-list-line"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="../settings/settings.html" class="menu-item">
+                    <i class="ri-settings-line"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+            
+            <div class="logout">
+                <button onclick="logout()">
+                    <i class="ri-logout-box-line"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

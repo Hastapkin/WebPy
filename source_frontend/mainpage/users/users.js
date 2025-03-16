@@ -1,3 +1,44 @@
+// Check login status
+window.onload = function() {
+    if (localStorage.getItem('isLoggedIn') !== 'true') {
+        location.href = '../../login/login.html';
+    }
+    // Initialize dashboard data
+    updateDashboard();
+    
+    // Add active class handler for menu items
+    setupMenuHighlighting();
+}
+
+// Setup menu highlighting
+function setupMenuHighlighting() {
+    // Get current page path
+    const currentPath = window.location.pathname;
+    
+    // Remove active class from all menu items
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Add active class to current page menu item
+    document.querySelectorAll('.menu-item').forEach(item => {
+        const href = item.getAttribute('href');
+        if (currentPath.includes(href)) {
+            item.classList.add('active');
+        }
+    });
+    
+    // If we're on the dashboard page
+    if (currentPath.includes('dashboard.html') || currentPath.endsWith('/dashboard/')) {
+        document.querySelector('a[href="dashboard.html"]').classList.add('active');
+    }
+}
+
+// Logout function
+function logout() {
+    localStorage.removeItem('isLoggedIn');
+    location.href = '../../login/login.html';
+}
 // Sample user data
 const sampleUsers = [
     {
@@ -425,12 +466,4 @@ function deleteUser(userId) {
     
     // Show confirmation
     alert(`User ${userName} deleted successfully!`);
-}
-
-// Logout function
-function logout() {
-    // In a real app, this would handle logout logic
-    alert('Logout functionality would be implemented here');
-    // Redirect to login page
-    // window.location.href = '../login/login.html';
 }

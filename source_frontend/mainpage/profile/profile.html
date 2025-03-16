@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSAS</title>
+    <title>OSAS - Profile</title>
     <!-- Link to icon library -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="profile.css">
@@ -19,7 +19,7 @@
             </div>
             
             <div class="menu">
-                <a href="../dashboard/dashboard.html" class="menu-item active">
+                <a href="../dashboard/dashboard.html" class="menu-item">
                     <i class="ri-dashboard-line"></i>
                     <span>Dashboard</span>
                 </a>
@@ -27,8 +27,7 @@
                     <i class="ri-user-line"></i>
                     <span>Users</span>
                 </a>
-                </a>
-                <a href="profile.html" class="menu-item">
+                <a href="profile.html" class="menu-item active">
                     <i class="ri-file-list-line"></i>
                     <span>Profile</span>
                 </a>
@@ -43,6 +42,157 @@
                     <i class="ri-logout-box-line"></i>
                     <span>Logout</span>
                 </button>
+            </div>
+        </div>
+        
+        <!-- MAIN CONTENT AREA -->
+        <div class="main-content">
+            <!-- Header with search and profile -->
+            <div class="header">
+                <div class="search">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                
+                <div class="user-profile">
+                    <img src="../../../assets/logoOSAS.png" alt="Admin Profile">
+                    <div class="user-info">
+                        <h4>OSAS</h4>
+                        <p>osas@osas.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PROFILE CONTENT -->
+            <h3 class="section-title">Admin Profile</h3>
+            
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="../../../assets/logoOSAS.png" alt="Admin Profile">
+                    </div>
+                    <div class="profile-info">
+                        <h2>OSAS Admin</h2>
+                        <p>Administrator</p>
+                        <p><i class="ri-mail-line"></i> osas@osas.com</p>
+                        <p><i class="ri-phone-line"></i> +1 (555) 123-4567</p>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn primary"><i class="ri-edit-line"></i> Edit Profile</button>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="profile-card">
+                        <h3><i class="ri-user-settings-line"></i> Personal Information</h3>
+                        <div class="profile-info-grid">
+                            <div class="info-item">
+                                <label>Full Name</label>
+                                <p>OSAS Admin</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Email</label>
+                                <p>osas@osas.com</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Phone</label>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Position</label>
+                                <p>System Administrator</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Department</label>
+                                <p>IT Administration</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Location</label>
+                                <p>Headquarters</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <h3><i class="ri-lock-line"></i> Account Security</h3>
+                        <div class="security-info">
+                            <div class="security-item">
+                                <div class="security-label">
+                                    <i class="ri-key-line"></i>
+                                    <span>Password</span>
+                                </div>
+                                <div class="security-action">
+                                    <button class="btn secondary">Change Password</button>
+                                </div>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-label">
+                                    <i class="ri-shield-check-line"></i>
+                                    <span>Two-Factor Authentication</span>
+                                </div>
+                                <div class="security-action">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="tfa-toggle" checked>
+                                        <label for="tfa-toggle"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-label">
+                                    <i class="ri-history-line"></i>
+                                    <span>Last Login</span>
+                                </div>
+                                <div class="security-value">
+                                    <span>March 16, 2025 - 10:45 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <h3><i class="ri-notification-line"></i> Notifications</h3>
+                        <div class="notification-settings">
+                            <div class="notification-item">
+                                <div class="notification-label">
+                                    <span>Email Notifications</span>
+                                </div>
+                                <div class="notification-action">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="email-toggle" checked>
+                                        <label for="email-toggle"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <div class="notification-label">
+                                    <span>System Alerts</span>
+                                </div>
+                                <div class="notification-action">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="alerts-toggle" checked>
+                                        <label for="alerts-toggle"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <div class="notification-label">
+                                    <span>User Activity Reports</span>
+                                </div>
+                                <div class="notification-action">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="reports-toggle" checked>
+                                        <label for="reports-toggle"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-footer">
+                    <button class="btn primary">Save Changes</button>
+                    <button class="btn secondary">Cancel</button>
+                </div>
             </div>
         </div>
     </div>

@@ -4,49 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSAS</title>
-    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="login.css">
-    <script>
-        // Function to validate the login credentials
-        function validateLogin() {
-            // Get the values of the username and password input fields
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-            // Check if the entered username and password match the predefined values
-            if ((username === 'admin' ) && password === 'admin') {
-                // If the credentials are correct, set the login status in localStorage and redirect to the dashboard
-                localStorage.setItem('isLoggedIn', 'true');
-                location.href = '../mainpage/dashboard/dashboard.html'; // Corrected path to the dashboard.html file
-            } else {
-                // If the credentials are incorrect, display an error message
-                errorMessage.textContent = 'Wrong username/password';
-            }
-        }
-        // Function to check if the user is already logged in
-        window.onload = function() {
-            // If the user is logged in, redirect to the dashboard
-            if (localStorage.getItem('isLoggedIn') === 'true') {
-                location.href = '../mainpage/dashboard/dashboard.html'; // Corrected path to the dashboard.html file
-            }
-        }
-    </script>
+    <script src="login.js" defer></script>    
 </head>
 <body>
     <!-- Container for the login form -->
     <div class="login-container">
+
         <!-- Logo image -->
         <img src="../../assets/logoOSAS.png" alt="Logo">
+
         <!-- Login title -->
         <h2>Login</h2>
+
         <!-- Input field for the username/phone number/email -->
+        <td><label for="username">Username:</label></td>
         <input type="text" id="username" placeholder="Username/Phone Number/Email" value="admin">
+
         <!-- Input field for the password -->
+        <td><label for="password">Password:</label></td>
         <input type="password" id="password" placeholder="Password" value="admin">
+
         <!-- Link to the forgot password page -->
         <a href="../forgotpassword/forgotpassword.html">Forgot Password?</a>
+
         <!-- Login button that triggers the validateLogin function -->
         <button onclick="validateLogin()">Login</button>
+
         <!-- Container for displaying error messages -->
         <div id="error-message" class="error-message"></div>
     </div>
